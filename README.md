@@ -126,6 +126,26 @@ hydp = gradient(hyd, ts);
 <img width="876" height="861" alt="imagen" src="https://github.com/user-attachments/assets/6597d0e9-7d42-4db1-8752-b5850a6f0613" />
 
 
+Trayectoria 10
+
+
+```
+tf=31.5
+ts=0.01
+
+hxd=5*cos(9*t).*cos(t);
+hyd=5*cos(9*t).*sin(t);
+
+hxdp = gradient(hxd, ts); 
+hydp = gradient(hyd, ts);
+
+```
+
+
+<img width="876" height="861" alt="imagen" src="https://github.com/user-attachments/assets/f0213c3c-0e8c-4b00-bc52-c29f58b7bc66" />
+
+
+
 
 
 
