@@ -1,5 +1,14 @@
 # Actividad-6.1-Seguimiento-de-Trayectorias-
 
+En esta actividad se implementó un código en MATLAB en el que un robot diferencial debe de seguir una trayectoria definida por una función la cual debe seguir a lazo cerrado, controlando las ganancias de su velocidad lineal y angular.
+
+Para que el robot siga la trayectoria con la mayor precisión posible, se siguieron los siguientes pasos:
+
+- Primero, para el caluclo de velocidad se debe caluclar la derivada de la trayectoria, para optimizar el proceso, se utilizó la función `gradient` la cual asegura que las velocidades de referencia sean exactas con respecto al tiempo de muestro que se definió en todas las trayectorias de 0.01.
+- Para realizar el hexágono el cual a diferencia de las demás trayectorias es un poligono, se usa la función `interp1`. Esto genera un camino continuo de puntos entre los vértices, permitiendo que el controlador siempre tenga un objetivo intermedio y no salte a otro vértice.
+- Se utilizó la pseudoinversa de Moore-Penrose para resolver la cinemática inversa con la función `pinv`.
+- Para trayectorias con curvas cerradas, se ajustaron los valores de la matriz de ganancias K, la cual se encontraron los valores optimos de 25 para la velocidad lineal y 5 para la velocidad angular. Estos valores funcionaron para la mayoría de las trayectorias. 
+
 Trayectoria 1
 
 ```
