@@ -125,6 +125,30 @@ hydp = gradient(hyd, ts);
 ```
 <img width="876" height="861" alt="imagen" src="https://github.com/user-attachments/assets/6597d0e9-7d42-4db1-8752-b5850a6f0613" />
 
+Trayectoria 9
+
+```
+tf=31.5
+ts=0.01
+
+L = 8; % Radio o distancia del centro al vértice
+puntos = 6; % Número de lados
+
+% Creamos los vértices 
+theta_v = linspace(0, 2*pi, puntos + 1);
+vertices_x = L * cos(theta_v);
+vertices_y = L * sin(theta_v);
+
+hxd = interp1(linspace(0, tf, length(vertices_x)), vertices_x, t, 'linear');
+hyd = interp1(linspace(0, tf, length(vertices_y)), vertices_y, t, 'linear');
+
+hxdp = gradient(hxd, ts); 
+hydp = gradient(hyd, ts);
+
+```
+
+<img width="851" height="839" alt="imagen" src="https://github.com/user-attachments/assets/66856f5a-43ad-4ea1-bafb-befd914ae9b0" />
+
 
 Trayectoria 10
 
