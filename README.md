@@ -28,7 +28,8 @@ hxdp=1-3*cos(t);
 hydp=3*sin(t);
 ```
 
-<img width="844" height="850" alt="imagen" src="https://github.com/user-attachments/assets/ee885366-c265-4628-a536-fca7a219a703" />
+<img width="1550" height="484" alt="imagen" src="https://github.com/user-attachments/assets/4e60578f-5755-4ce0-b0c6-0c74120a18e8" />
+
 
 
 
