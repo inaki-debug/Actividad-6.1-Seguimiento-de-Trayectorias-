@@ -30,6 +30,23 @@ hydp=3*sin(t);
 
 <img width="1550" height="484" alt="imagen" src="https://github.com/user-attachments/assets/4e60578f-5755-4ce0-b0c6-0c74120a18e8" />
 
+Trayectoria 3
+
+```
+tf=31.5
+ts=0.01
+
+hxd=3-cos(t)-cos(3*t);
+hyd=4*sin(3*t);
+
+hxdp=sin(t)+3*sin(3*t);
+hydp=12*cos(3*t);
+```
+
+
+<img width="223" height="267" alt="imagen" src="https://github.com/user-attachments/assets/b02b2d07-33a6-453d-8abe-46320a6581e2" />
+
+
 
 
 
