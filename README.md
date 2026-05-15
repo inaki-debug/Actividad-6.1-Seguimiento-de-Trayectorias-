@@ -144,6 +144,25 @@ hydp = gradient(hyd, ts);
 
 <img width="876" height="861" alt="imagen" src="https://github.com/user-attachments/assets/f0213c3c-0e8c-4b00-bc52-c29f58b7bc66" />
 
+Trayectoria 11
+
+```
+tf=31.5
+ts=0.01
+
+a=0.5;
+
+hxd = a * (16 * sin(t).^3);
+hyd = a * (13 * cos(t) - 5 * cos(2*t) - 2 * cos(3*t) - cos(4*t));
+
+hxdp = gradient(hxd, ts); 
+hydp = gradient(hyd, ts);
+
+```
+
+<img width="864" height="877" alt="imagen" src="https://github.com/user-attachments/assets/eb6a4ded-bd16-4290-b37a-cb8bff5aca13" />
+
+
 
 
 
