@@ -7,7 +7,9 @@ Para que el robot siga la trayectoria con la mayor precisión posible, se siguie
 - Primero, para el caluclo de velocidad se debe caluclar la derivada de la trayectoria, para optimizar el proceso, se utilizó la función `gradient` la cual asegura que las velocidades de referencia sean exactas con respecto al tiempo de muestro que se definió en todas las trayectorias de 0.01.
 - Para realizar el hexágono el cual a diferencia de las demás trayectorias es un poligono, se usa la función `interp1`. Esto genera un camino continuo de puntos entre los vértices, permitiendo que el controlador siempre tenga un objetivo intermedio y no salte a otro vértice.
 - Se utilizó la pseudoinversa de Moore-Penrose para resolver la cinemática inversa con la función `pinv`.
-- Para trayectorias con curvas cerradas, se ajustaron los valores de la matriz de ganancias K, la cual se encontraron los valores optimos de 25 para la velocidad lineal y 5 para la velocidad angular. Estos valores funcionaron para la mayoría de las trayectorias. 
+- Para trayectorias con curvas cerradas, se ajustaron los valores de la matriz de ganancias K, la cual se encontraron los valores optimos de 25 para la velocidad lineal y 5 para la velocidad angular. Estos valores funcionaron para la mayoría de las trayectorias.
+
+Estos fueron los resultados del seguimiento de las siguientes trayectorias:
 
 Trayectoria 1
 
@@ -195,6 +197,9 @@ hydp = gradient(hyd, ts);
 
 <img width="864" height="877" alt="imagen" src="https://github.com/user-attachments/assets/eb6a4ded-bd16-4290-b37a-cb8bff5aca13" />
 
+### Conclusión
+
+No se logró completar con éxito aquellas trayectorias que eran muy difíciles y que tenían mucha vuelta, ya que la complejidad de los giros cerrados y los cambios de sentido constantes superaron la capacidad de respuesta dinámica del robot bajo las ganancias establecidas.
 
 
 
